@@ -1,0 +1,49 @@
+#Java_Process
+-------------------------
+.java source code =>
+compiled (byte code) => 
+binary/excutable file (not human readable)
+
+JDK (Req. For compilation & Execution)
+
+#Vaeiables
+------------------
+The Java programming language defines the following kinds of variables:
+
+• Instance Variables (Non-Static Fields) also known as instance variables because their values are unique to each instance of a class, the currentSpeed of one bicycle is independent from the currentSpeed of another.
+
+• Class Variables (Static Fields) A class variable is any field declared with the static modifier;this tells the compiler that there is exactly one copy of this variable in existence, regardless of how many times the class has been instantiated. A field defining the number of gears for a particular kind of bicycle could be marked as static since conceptually the same number of gears will apply to all instances. The code static int numGears = 6; would create such a static field. Additionally, the keyword final could be added to indicate that the number of gears will never change.
+
+• Local Variables 
+
+• Parameters
+
+
+#Premitive Data Types in Java
+------------------------------------------------
+eight primitive data types supported by the Java programming language are:
+
+• byte: The byte data type is an 8-bit signed two's complement integer. It has a minimum value of -128 and a maximum value of 127 (inclusive).
+
+• short: The short data type is a 16-bit signed two's complement integer. It has a minimum value of -32,768 and a maximum value of 32,767 (inclusive)
+
+• int: By default, the int data type is a 32-bit signed two's complement integer, which has a minimum value of -2^31 and a maximum value of 2^31-1
+
+• long: The long data type is a 64-bit two's complement integer. The signed long has a minimum value of -2^63 and a maximum value of 2^63-1
+
+• float: The float data type is a single-precision 32-bit IEEE 754 floating point
+
+• double: The double data type is a double-precision 64-bit IEEE 754 floating point
+
+• boolean: The boolean data type has only two possible values: true and false
+
+• char: The char data type is a single 16-bit Unicode character. It has a minimum value of \u0000 (or 0) and a maximum value of \uffff (or 65,535 inclusive).
+
+the compiler never assigns a default value to an uninitialized local variable. If you cannot initialize your local variable where it is declared, make sure to assign it a value before you attempt to use it. Accessing an uninitialized local variable will result in a compile-time error.
+
+// The number 26, in decimal int decimalValue = 26; 
+
+// The number 26, in hexadecimal int hexadecimalValue = 0x1a; 
+
+// The number 26, in binary int 
+binaryValue = 0b11010;
