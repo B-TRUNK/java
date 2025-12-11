@@ -1,0 +1,113 @@
+What is an Object?
+An object is a software bundle of related state and behavior
+
+ 
+
+class Bicycle {
+
+    int cadence = 0;
+    int speed = 0;
+    int gear = 1;
+
+    void changeCadence(int newValue) {
+         cadence = newValue;
+    }
+
+    void changeGear(int newValue) {
+         gear = newValue;
+    }
+
+    void speedUp(int increment) {
+         speed = speed + increment;   
+    }
+
+    void applyBrakes(int decrement) {
+         speed = speed - decrement;
+    }
+
+    void printStates() {
+         IO.println("cadence:" +
+             cadence + " speed:" + 
+             speed + " gear:" + gear);
+    }
+}
+
+Inside maun()
+
+// Create two different 
+// Bicycle objects 
+Bicycle bike1 = new Bicycle(); 
+Bicycle bike2 = new Bicycle();
+
+// Invoke methods on 
+// those objects bike1.changeCadence(50); bike1.speedUp(10);
+bike1.changeGear(2); 
+bike1.printStates();
+
+What is Inheritance?
+ 
+
+class MountainBike extends Bicycle { 
+// new fields and methods defining 
+// a mountain bike would go here 
+}
+
+What is an Interface?
+
+interface Bicycle {
+
+    //  wheel revolutions per minute
+    void changeCadence(int newValue);
+
+    void changeGear(int newValue);
+
+    void speedUp(int increment);
+
+    void applyBrakes(int decrement);
+}
+
+To implement this interface:
+
+class ACMEBicycle implements Bicycle {
+
+    int cadence = 0;
+    int speed = 0;
+    int gear = 1;
+
+   // The compiler will now require that methods
+   // changeCadence, changeGear, speedUp, and applyBrakes
+   // all be implemented. Compilation will fail if those
+   // methods are missing from this class.
+
+    void changeCadence(int newValue) {
+         cadence = newValue;
+    }
+
+    void changeGear(int newValue) {
+         gear = newValue;
+    }
+
+    void speedUp(int increment) {
+         speed = speed + increment;   
+    }
+
+    void applyBrakes(int decrement) {
+         speed = speed - decrement;
+    }
+
+    void printStates() {
+         IO.println("cadence:" +
+             cadence + " speed:" + 
+             speed + " gear:" + gear);
+    }
+}
+
+Implementing an interface allows a class to become more formal about the behavior it promises to provide.
+
+What is a Package?
+A package is a namespace that organizes a set of related classes and interfaces. Conceptually you can think of packages as being similar to different folders on your computer.
+
+Because software written in the Java programming language can be composed of hundreds or thousands of individual classes, it makes sense to keep things organized by placing related classes and interfaces into packages.
+
+https://docs.oracle.com/en/java/javase/25/docs/api/index.html
+contains the complete listing for all packages, interfaces, classes, fields, and methods supplied by the Java SE platform.
