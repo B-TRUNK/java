@@ -1,0 +1,80 @@
+A subclass inherits all the members (fields, methods, and nested classes) from its superclass. Constructors are not members, so they are not inherited by subclasses, but the constructor of the superclass can be invoked from the subclass.
+
+public class Bicycle {
+        
+    // the Bicycle class has three fields
+    public int cadence;
+    public int gear;
+    public int speed;
+        
+    // the Bicycle class has one constructor
+    public Bicycle(int startCadence, int startSpeed, int startGear) {
+        gear = startGear;
+        cadence = startCadence;
+        speed = startSpeed;
+    }
+        
+    // the Bicycle class has four methods
+    public void setCadence(int newValue) {
+        cadence = newValue;
+    }
+        
+    public void setGear(int newValue) {
+        gear = newValue;
+    }
+        
+    public void applyBrake(int decrement) {
+        speed -= decrement;
+    }
+        
+    public void speedUp(int increment) {
+        speed += increment;
+    }
+}
+
+
+public class MountainBike extends Bicycle {
+        
+    // the MountainBike subclass adds one field
+    public int seatHeight;
+
+    // the MountainBike subclass has one constructor
+    public MountainBike(int startHeight,
+                        int startCadence,
+                        int startSpeed,
+                        int startGear) {
+        super(startCadence, startSpeed, startGear);
+        seatHeight = startHeight;
+    }   
+        
+    // the MountainBike subclass adds one method
+    public void setHeight(int newValue) {
+        seatHeight = newValue;
+    }   
+}
+
+A subclass inherits all of the public and protected members of its parent, no matter what package the subclass is in. If the subclass is in the same package as its parent, it also inherits the package-private members of the parent. You can use the inherited members as is, replace them, hide them, or supplement them with new members
+
+Casting Objects
+We have seen that an object is of the data type of the class from which it was instantiated. For example, if we write
+
+public MountainBike myBike = new MountainBike();
+
+then myBike is of type MountainBike.
+MountainBike is descended from Bicycle and Object. Therefore, a MountainBike is a Bicycle and is also an Object, and it can be used wherever Bicycle or Object objects are called for.
+
+Casting shows the use of an object of one type in place of another type, among the objects permitted by inheritance and implementations. For example, if we write
+
+Object obj = new MountainBike();
+
+then obj is both an Object and a MountainBike (until such time as obj is assigned another object that is not a MountainBike). This is called implicit casting.
+
+Multiple Inheritance of State, Implementation, and Type
+
+One significant difference between classes and interfaces is that classes can have fields whereas interfaces cannot.
+
+In addition, you can instantiate a class to create an object, which you cannot do with interfaces.
+
+The Java programming language supports multiple inheritance of type, which is the ability of a class to implement more than one interface.
+
+As with multiple inheritance of implementation, a class can inherit different implementations of a method defined (as default or static) in the interfaces that it extends. In this case, the compiler or the user must decide which one to use.
