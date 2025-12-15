@@ -1,0 +1,63 @@
+UML : Unified Modelling Language
+
+Consits of for Diagrams (class, object, sequence & package)
+
+Uml class diagram
+
+ 
+
+- Relationships
+Navigability
+Multiplicity
+Dependency
+Aggression
+Composition
+
+- Generalizatiin / Specialization:
+Inheritance
+Interface
+
+* UML Syntax
+
+Attributes should be shown as:
+Visibility name : type multiplicity
+
+- visibility as:
++ bublic
+- private
+# protected
+_ package
+
+- multiplicity as:
+n exactly n
+* zero or more
+m...n between m and n
+
+Examples:
+
+-custRef: int [1]
+A private attribute custRef is a single int value
+
+#itemCodes : String [1...*]
+A protected attr itemCodes is one or more String Values
+
+validCard:boolean
+Unspecified attr visibility has no multiplicity
+
++addName(newName: String)boolean
+Parameter in paranthesis and then return type
+
+*Denoting Classes:
+
+ 
+
+ 
+
+ 
+
+Types of Association:
+- dependency
+- sumple association
+- bidirectional asssociation
+- agregation
+- composition
